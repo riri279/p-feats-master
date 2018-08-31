@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base target="_parent">
+    <title>Trouver des services d'emploi et de formation | Ontario.ca</title>
+    <link rel="stylesheet" href="/css/combined.css" type="text/css">
+    <link rel="stylesheet" href="/css/featsMap.css" type="text/css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="/vendor/modernizr/modernizr.js"></script>
+  </head>
+
+  <body>
+    <div id="googft-search-container" class="row">
+      <div class="small-12 columns">
+        <label class="strong" for="googft-pac-input">Saisissez une ville, une adresse ou un code postal :</label>
+      </div>
+      <div class="small-12 columns">
+        <input type="text" id="googft-pac-input" placeholder="">
+        <div class="googft-pac-wrapper"></div>
+      </div>
+    </div>
+
+    <div class="small-12 columns map-container" aria-hidden="true">
+      <div id="googft-mapCanvas"></div>
+      <div id="googft-legend"></div>
+      <div id="googft-legend-open"></div>
+      <div id="googft-legend-close"></div>
+    </div>
+
+    <div id="googft-geolocation-toast" class="googft-toast" aria-hidden="true">
+      <div>Déterminer votre localisation…</div>
+    </div>
+
+    <div id="accessibility" class="show-for-sr"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/js/featsMap.js"></script>
+    <!-- build:template
+    <script async defer src="https://maps.google.com/maps/api/js?v=3&amp;libraries=places&amp;key=<%= mapsKey %>&amp;language=fr&amp;region=CA&amp;callback=initMap"></script>
+    /build -->
+  </body>
+</html>

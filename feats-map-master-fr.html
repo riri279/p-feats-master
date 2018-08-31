@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Trouver des services d'emploi et de formation | Ontario.ca</title>
+    <link rel="stylesheet" href="/css/combined.css">
+    <link rel="stylesheet" href="/css/featsMapMaster.css">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </head>
+
+  <body class="project">
+
+    <header>
+      <a href="https://www.ontario.ca/page/government-ontario">
+        <div class="iconWrapperLongNoBg iconLogoHeader offset-logo">
+          <span class="icon-ontarioLogo" aria-hidden="true"></span>
+          <span class="show-for-sr">Page d’accueil du gouvernement de l’Ontario</span>
+        </div>
+      </a>
+
+      <a href="/locations/employment-training/" lang="en" class="header-link right small offset-lang-toggle"
+         rel="alternate">english</a>
+    </header>
+
+    <div id="googft-mapCanvas"></div>
+
+    <div id="googft-legend"
+         class="project-legend">
+      <div class="row">
+        <div class="small-12 show-for-large-up columns callout no-margin no-border">
+          <h1 class="h4 no-margin title">Services d'emploi et de formation</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="hide-for-large-up small-1 column">
+          <span id="mobile-filter" class="icon-menu" aria-hidden="true"></span>
+        </div>
+        <div id="googft-search"
+             class="project-search small-10 large-12 column">
+          <div>
+            <h1 class="h4 show-for-large-up accordion-title">Trouvez un bureau</h1>
+            <div id="search-wrapper">
+              <input autocomplete="off"
+                     placeholder="Recherche à proximité…"
+                     type="search"
+                     id="googft-search-element">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 column">
+          <h1 class="h4 show-for-large-up accordion-title">Choisissez un programme ou un service</h1>
+          <div id="filter-wrapper">
+            <form>
+              <fieldset>
+                <div class="row collapse">
+                  <div class="small-1 column">
+                    <input type="checkbox" name="category-filter" id="PR003" value="PR003">
+                  </div>
+                  <div class="small-11 column">
+                    <label for="PR003" class="PR003">Programmes à credits du secondaire pour adultes</label>
+                  </div>
+                </div>
+                <div class="row collapse">
+                  <div class="small-1 column">
+                    <input type="checkbox" name="category-filter" id="PR013" value="PR013">
+                  </div>
+                  <div class="small-11 column">
+                    <label for="PR013" class="PR013">Alphabétisation et formation de base</label>
+                  </div>
+                </div>
+                <div class="row collapse">
+                  <div class="small-1 column">
+                    <input type="checkbox" name="category-filter" id="PR015" value="PR015">
+                  </div>
+                  <div class="small-11 column">
+                    <label for="PR015" class="PR015">Services d'aide à l'emploi de l'Ontario</label>
+                  </div>
+                </div>
+                <div class="row collapse">
+                  <div class="small-1 column">
+                    <input type="checkbox" name="category-filter" id="PR023" value="PR023">
+                  </div>
+                  <div class="small-11 column">
+                    <label for="PR023" class="PR023">Programmes d'apprentissage pour les jeunes</label>
+                  </div>
+                </div>
+                <div class="row collapse">
+                  <div class="small-1 column">
+                    <input type="checkbox" name="category-filter" id="PR030" value="PR030">
+                  </div>
+                  <div class="small-11 column">
+                    <label for="PR030" class="PR030">Apprentissage bureau</label>
+                  </div>
+                </div>
+                <div class="row collapse">
+                  <div class="small-1 column">
+                    <input type="checkbox" name="category-filter" id="PR031" value="PR031">
+                  </div>
+                  <div class="small-11 column">
+                    <label for="PR031" class="PR031">Apprentissage-diplôme</label>
+                  </div>
+                </div>
+                <div class="row collapse">
+                  <div class="small-1 column">
+                    <input type="checkbox" name="category-filter" id="PR032" value="PR032">
+                  </div>
+                  <div class="small-11 column">
+                    <label for="PR032" class="PR032">Services d'emploi de l'Ontario</label>
+                  </div>
+                </div>
+                <div class="row collapse">
+                  <div class="small-1 column">
+                    <input type="checkbox" name="category-filter" id="PR035" value="PR035">
+                  </div>
+                  <div class="small-11 column">
+                    <label for="PR035" class="PR035">Subvention Canada-Ontario pour l’emploi</label>
+                  </div>
+                </div>
+                <div class="row collapse">
+                  <div class="small-1 column">
+                    <input type="checkbox" name="category-filter" id="PR036" value="PR036">
+                  </div>
+                  <div class="small-11 column">
+                    <label for="PR036" class="PR036">Programme d'accès à l'emploi pour les jeunes</label>
+                  </div>
+                </div>
+                <div class="row collapse">
+                  <div class="small-1 column">
+                    <input type="checkbox" name="category-filter" id="PR040" value="PR040">
+                  </div>
+                  <div class="small-11 column">
+                    <label for="PR040" class="PR040">Programme d'accès aux emplois d'été pour les jeunes</label>
+                  </div>
+                </div>
+                <div class="row collapse">
+                  <div class="small-1 column">
+                    <input type="checkbox" name="category-filter" id="PR041" value="PR041">
+                  </div>
+                  <div class="small-11 column">
+                    <label for="PR041" class="PR041">Programme d'orientation en matière d'emploi pour les jeunes</label>
+                  </div>
+                </div>
+                <hr>
+                <div class="state-filters">
+                  <div class="row collapse">
+                    <div class="small-1 column">
+                      <input type="checkbox" name="status-filter" id="CL003" value="CL003">
+                    </div>
+                    <div class="small-11 column">
+                      <label for="CL003">Entreprises</label>
+                    </div>
+                  </div>
+                  <div class="row collapse">
+                    <div class="small-1 column">
+                      <input type="checkbox" name="status-filter" id="CL004" value="CL004">
+                    </div>
+                    <div class="small-11 column">
+                      <label for="CL004">Francophones</label>
+                    </div>
+                  </div>
+                  <div class="row collapse">
+                    <div class="small-1 column">
+                      <input type="checkbox" name="status-filter" id="CL005" value="CL005">
+                    </div>
+                    <div class="small-11 column">
+                      <label for="CL005">Immigrants/nouveaux arrivants</label>
+                    </div>
+                  </div>
+                  <div class="row collapse">
+                    <div class="small-1 column">
+                      <input type="checkbox" name="status-filter" id="CL001" value="CL001">
+                    </div>
+                    <div class="small-11 column">
+                      <label for="CL001">Peuples autochtones</label>
+                    </div>
+                  </div>
+                  <div class="row collapse">
+                    <div class="small-1 column">
+                      <input type="checkbox" name="status-filter" id="CL002" value="CL002">
+                    </div>
+                    <div class="small-11 column">
+                      <label for="CL002">Travailleurs âgés</label>
+                    </div>
+                  </div>
+                  <div class="row collapse">
+                    <div class="small-1 column">
+                      <input type="checkbox" name="status-filter" id="CL007" value="CL007">
+                    </div>
+                    <div class="small-11 column">
+                      <label for="CL007">Bénéficiaires de l'aide sociale</label>
+                    </div>
+                  </div>
+                  <div class="row collapse">
+                    <div class="small-1 column">
+                      <input type="checkbox" name="status-filter" id="CL006" value="CL006">
+                    </div>
+                    <div class="small-11 column">
+                      <label for="CL006">Personnes handicapées</label>
+                    </div>
+                  </div>
+                  <div class="row collapse">
+                    <div class="small-1 column">
+                      <input type="checkbox" name="status-filter" id="CL008" value="CL008">
+                    </div>
+                    <div class="small-11 column">
+                      <label for="CL008">Étudiants</label>
+                    </div>
+                  </div>
+                  <div class="row collapse">
+                    <div class="small-1 column">
+                      <input type="checkbox" name="status-filter" id="CL009" value="CL009">
+                    </div>
+                    <div class="small-11 column">
+                      <label for="CL009">Femmes</label>
+                    </div>
+                  </div>
+                  <div class="row collapse">
+                    <div class="small-1 column">
+                      <input type="checkbox" name="status-filter" id="CL010" value="CL010">
+                    </div>
+                    <div class="small-11 column">
+                      <label for="CL010">Jeunes</label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="googft-geolocation-toast" class="project-toast">
+      <div>Déterminer votre localisation…</div>
+    </div>
+
+    <div id="googft-loading-toast" class="project-toast">
+      <div>Chargement des données…</div>
+    </div>
+
+    <script>window._imGoogle = {
+      "en": {
+        "table": {
+          "id": "1R11WbEAQyhmDY7VIJ7Ff1GfpIH4BgQbjsTd_hmZy",
+          "styleId": 2,
+          "templateId": 2,
+          "col": "col10"
+        }
+      },
+      "fr": {
+        "table": {
+          "id": "1R11WbEAQyhmDY7VIJ7Ff1GfpIH4BgQbjsTd_hmZy",
+          "styleId": 3,
+          "templateId": 3,
+          "col": "col10"
+        }
+      }
+    }['en'];</script>
+    <script src="/js/featsMapMaster.js"></script>
+    <!-- build:template
+    <script async defer src="https://maps.google.com/maps/api/js?v=3&amp;libraries=places&amp;key=<%= mapsKey %>&amp;language=fr&amp;region=CA&amp;callback=initMap"></script>
+    /build -->
+    <!-- build:template
+    <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', '<%= uacode %>', {
+      'cookieDomain': 'auto',
+      'allowLinker': true
+    });
+    ga('require', 'linker');
+    ga('linker:autoLink', [] );
+    ga('send', 'pageview');
+    </script>
+    /build -->
+  </body>
+</html>

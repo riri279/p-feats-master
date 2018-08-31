@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Find employment and training services | Ontario.ca</title>
+      <link rel="stylesheet" href="css/combined.css">
+      <link rel="stylesheet" href="css/featsMapMaster.css">
+      <link rel="icon" type="image/png" href="/img/favicon.png">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+   </head>
+   <body class="project">
+      <header>
+         <a href="https://www.ontario.ca/page/government-ontario">
+            <div class="iconWrapperLongNoBg iconLogoHeader offset-logo">
+               <span class="icon-ontarioLogo" aria-hidden="true"></span>
+               <span class="show-for-sr">Government of Ontario home page</span>
+            </div>
+         </a>
+         <a href="/fr/locations/emploi-formation/" lang="fr" class="header-link right small offset-lang-toggle"
+            rel="alternate">français</a>
+      </header>
+      <div class="master-container">
+      <div class="top-bar">
+        <div class="top-bar-title">
+         <h1 class="dropdown-title">Find employment and training services near you</h1>
+         <p  class="title-blurb">See what programs are being offered in your community</p>
+       </div>
+         <div id="">
+            <div class="row top-bar-row">
+               <div class="small-12 column">
+                  <p class="top-bar-instruction">What programs are you interested in?</p>
+                  <form>
+                     <div class="row">
+                        <div class="small-3 column">
+                          <label class="checkbox-label">
+                            <input class="checkbox" type="checkbox" name="category-filter" id="PR003" value="PR003">
+                            <div class="check-button">Adult High School Credit Programs</div>
+                          </label>
+                        </div>
+                        <div class="small-3 column">
+                          <label class="checkbox-label">
+                            <input class="checkbox" type="checkbox" name="category-filter" id="PR013" value="PR013">
+                            <div class="check-button">Literacy and Basic Skills</div>
+                          </label>
+                        </div>
+                        <div class="small-3 column">
+                          <label class="checkbox-label">
+                            <input class="checkbox" type="checkbox" name="category-filter" id="PR015" value="PR015">
+                            <div class="check-button">Job search support / training</div>
+                          </label>
+                        </div>
+                        <div class="small-3 column">
+                          <label class="checkbox-label">
+                            <input class="checkbox" type="checkbox" name="category-filter" id="PR023" value="PR023">
+                            <div class="check-button">Youth Employment</div>
+                          </label>
+                        </div>
+                     </div>
+                     <div class="row">
+
+                     </div>
+                     <div class="row">
+                        <div class="small-3 column">
+                          <label class="checkbox-label">
+                            <input class="checkbox" type="checkbox" name="category-filter" id="PR030" value="PR030">
+                            <div class="check-button">Apprenticeship Office</div>
+                          </label>
+                        </div>
+                        <div class="small-3 column">
+                          <label class="checkbox-label">
+                            <input class="checkbox" type="checkbox" name="category-filter" id="PR031" value="PR031">
+                            <div class="check-button">Co-op Diploma Apprenticeship</div>
+                          </label>
+                        </div>
+                        <div class="small-3 column">
+                          <label class="checkbox-label">
+                            <input class="checkbox" type="checkbox" name="category-filter" id="PR032" value="PR032">
+                            <div class="check-button">Employment Service Sites</div>
+                          </label>
+                        </div>
+                        <div class="small-3 column">
+                          <label class="checkbox-label">
+                            <input class="checkbox" type="checkbox" name="category-filter" id="PR035" value="PR035">
+                            <div class="check-button">Canada Ontario Job Grant</div>
+                          </label>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="small-3 column">
+                          <label class="checkbox-label">
+                            <input class="checkbox" type="checkbox" name="category-filter" id="PR036" value="PR036">
+                            <div class="check-button">Youth Job Connection</div>
+                          </label>
+                        </div>
+                        <div class="small-3 column">
+                          <label class="checkbox-label">
+                            <input class="checkbox" type="checkbox" name="category-filter" id="PR040" value="PR040">
+                            <div class="check-button">Youth Job Connection Summer</div>
+                          </label>
+                        </div>
+                        <div class="small-3 column">
+                          <label class="checkbox-label">
+                            <input class="checkbox" type="checkbox" name="category-filter" id="PR041" value="PR041">
+                            <div class="check-button">Youth Job Link</div>
+                          </label>
+                        </div>
+                        <div class="small-3 column">
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="small-6 column tile-button-row">
+                           <div class="tile-button" id='checkAll'>Select all programs</div>
+                           <div class="tile-button" id='clearAll'>Clear selected</div>
+                        </div>
+                        <div class="small-6 column">
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+            <div class='row top-bar-row'>
+              <div id="googft-search" class="small-3 column search-box">
+                  <p class="top-bar-instruction">Postal code, town or city</p>
+                  <div class="searchbar-wrapper">
+                     <div id="search-wrapper">
+                        <input autocomplete="off"
+                           placeholder="Search near…"
+                           type="search"
+                           id="googft-search-element">
+                     </div>
+                  </div>
+               </div>
+               <div class="small-9 column">
+               </div>
+            </div>
+            <div class="row top-bar-row">
+              <div class="small-12 column audience-filter">
+                  <p class="top-bar-instruction">Tell us if you want services that focus on a specific group of people</p>
+                  <form>
+                     <div class="state-filters">
+                        <div class="row ">
+                           <div class="small-3 column">
+                              <label class="checkbox-label">
+                                <input class="checkbox" type="checkbox" name="status-filter" id="CL003" value="CL003">
+                                <div class="check-button">Businesses</div>
+                              </label>
+                           </div>
+                           <div class="small-3 column">
+                              <label class="checkbox-label">
+                                <input class="checkbox" type="checkbox" name="status-filter" id="CL004" value="CL004">
+                                <div class="check-button">Francophones</div>
+                              </label>
+                           </div>
+                           <div class="small-3 column">
+                              <label class="checkbox-label">
+                                <input class="checkbox" type="checkbox" name="status-filter" id="CL005" value="CL005">
+                                <div class="check-button">Immigrants and newcomers</div>
+                              </label>
+                           </div>
+                           <div class="small-3 column">
+                              <label class="checkbox-label">
+                                <input class="checkbox" type="checkbox" name="status-filter" id="CL001" value="CL001">
+                                <div class="check-button">Indigenous peoples</div>
+                              </label>
+                           </div>
+                        </div>
+                        <div class="row ">
+                           <div class="small-3 column">
+                              <label class="checkbox-label">
+                                <input class="checkbox" type="checkbox" name="status-filter" id="CL007" value="CL007">
+                                <div class="check-button">Persons on social assistance</div>
+                              </label>
+                           </div>
+                           <div class="small-3 column">
+                              <label class="checkbox-label">
+                                <input class="checkbox" type="checkbox" name="status-filter" id="CL006" value="CL006">
+                                <div class="check-button">Persons with disabilities</div>
+                              </label>
+                           </div>
+                           <div class="small-3 column">
+                              <label class="checkbox-label">
+                                <input class="checkbox" type="checkbox" name="status-filter" id="CL008" value="CL008">
+                                <div class="check-button">Students</div>
+                              </label>
+                           </div>
+                           <div class="small-3 column">
+                              <label class="checkbox-label">
+                                <input class="checkbox" type="checkbox" name="status-filter" id="CL001" value="CL001">
+                                <div class="check-button">Women</div>
+                              </label>
+                           </div>
+                        </div>
+                        <div class="row">
+                          <div class="small-3 column">
+                              <label class="checkbox-label">
+                                <input class="checkbox" type="checkbox" name="status-filter" id="CL010" value="CL010">
+                                <div class="check-button">Youth</div>
+                              </label>
+                           </div>
+                           <div class="small-3 column">
+                              <label class="checkbox-label">
+                                <input class="checkbox" type="checkbox" name="status-filter" id="CL002" value="CL002">
+                                <div class="check-button">Older workers</div>
+                              </label>
+                           </div>
+                           <div class="small-6 column">
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="googft-mapCanvas" class="extend-map"></div>
+      <div id='program-list' class="hide">
+         <div class="results-header">
+          <div class="row">
+            <div class="small-9 column">
+              <h3>Results</h3>
+              <div class="results-text">Ordered by distance from your current location, <br><span id="results-count">0</span> results in total</div>
+            </div>
+            <div class="small-3 column">
+              <div class="button filter-button">Filter</div>
+            </div>
+          </div>
+         </div>
+         <span id="program-list-items">
+         </span>
+      </div>
+      <div id="googft-geolocation-toast" class="project-toast">
+         <div>Determining your location…</div>
+      </div>
+      <div id="googft-loading-toast" class="project-toast">
+         <div>Loading data…</div>
+      </div>
+    </div>
+      <script>window._imGoogle = {
+         "en": {
+           "table": {
+             "id": "1R11WbEAQyhmDY7VIJ7Ff1GfpIH4BgQbjsTd_hmZy",
+             "styleId": 2,
+             "templateId": 2,
+             "col": "col10"
+           }
+         },
+         "fr": {
+           "table": {
+             "id": "1R11WbEAQyhmDY7VIJ7Ff1GfpIH4BgQbjsTd_hmZy",
+             "styleId": 3,
+             "templateId": 3,
+             "col": "col10"
+           }
+         }
+         }['en'];
+      </script>
+      <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+      <script src="/js/featsMapMaster.js"></script>
+      <script async defer src="https://maps.google.com/maps/api/js?v=3&amp;libraries=places&amp;key=AIzaSyA0IewSWa9yMWxZh7xdzkdiQzWCdtbF_Mg&amp;language=en&amp;region=CA&amp;callback=initMap"></script>
+      <script>
+         (function(i, s, o, g, r, a, m) {
+         i['GoogleAnalyticsObject'] = r;
+         i[r] = i[r] || function() {
+         (i[r].q = i[r].q || []).push(arguments)
+         }, i[r].l = 1 * new Date();
+         a = s.createElement(o),
+         m = s.getElementsByTagName(o)[0];
+         a.async = 1;
+         a.src = g;
+         m.parentNode.insertBefore(a, m)
+         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+         ga('create', '<%= uacode %>', {
+         'cookieDomain': 'auto',
+         'allowLinker': true
+         });
+         ga('require', 'linker');
+         ga('linker:autoLink', [] );
+         ga('send', 'pageview');
+      </script>
+      <!--<div class="footer">
+          <h3 class="footlink"> Contact Us </h3>
+      </div>-->
+   </body>
+</html>

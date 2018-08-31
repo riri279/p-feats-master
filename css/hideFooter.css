@@ -1,0 +1,11 @@
+/* line 2, scss/hideFooter.scss */
+footer h2, footer .minister-quote, footer .contact, footer .topics, footer .footer-picture {
+  display: none !important; }
+
+/* line 6, scss/hideFooter.scss */
+footer .owner-branding {
+  width: 100%; }
+
+/* line 10, scss/hideFooter.scss */
+footer .row .columns {
+  float: none; }

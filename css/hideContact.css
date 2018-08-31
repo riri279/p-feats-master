@@ -1,0 +1,3 @@
+/* line 2, scss/hideContact.scss */
+.contact ul li:nth-child(1), .contact ul li:nth-child(2) {
+  display: none; }
